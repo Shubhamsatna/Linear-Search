@@ -1,0 +1,22 @@
+public class MaxFinder {
+    public static Integer findMaxLinear(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return null; 
+        }
+
+        int maxElement = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > maxElement) {
+                maxElement = arr[i];
+            }
+        }
+        return maxElement;
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {10, 22, 5, 3, 99, 1};
+        Integer max = findMaxLinear(numbers);
+        System.out.println("Maximum value: " + max);  
+
+    }
+}
